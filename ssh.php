@@ -1,0 +1,1 @@
+<?php $ssh_path = "sshkey/id_rsa"; ?>
