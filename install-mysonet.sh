@@ -24,6 +24,7 @@ done
 echo "############"
 echo "1 - Ayez une IP publique ou un nom de domaine qui y redirige."
 echo "2 - En utilisation réseau local, assurez-vous d'avoir une IP privée statique."
+echo "3 - Assurez-vous que votre box soit bien configuré (redirection, NAT, ports ouverts...)."
 echo "Votre serveur est-il configuré correctement ? Oui (o) | Non (n)"
 
 while true; do
@@ -100,7 +101,7 @@ echo "Redémarrage d'Apache..."
 sudo systemctl restart apache2
 
 # Cloner le dépôt Git à l'emplacement souhaité
-git clone https://github.com/CebrailDevOps/spriv.git
+git clone https://github.com/CebrailDevOps/mysonetPrivate.git
 
 echo "Les dossiers et fichiers ont été téléchargés avec succès depuis le dépôt Git."
 
@@ -301,6 +302,12 @@ echo "Les modules Apache nécessaires ont été activés et Apache a été redé
 (crontab -l; echo "*/15 * * * * /bin/bash $CURRENT_DIR/scripts/relance_reponse.sh") | crontab -
 
 echo "La tâche cron pour automatiser l'envoi d'une réponse aux nouveaux amis a été configurée."
+
+read -p "Veuillez entrer un ID MySoNet (caractères alphanumériques et underscore uniquement) : " ip_mysonetPrivate
+
+sudo -u inspectorsonet bash -c "echo '$ip_mysonetPrivate' > /home/inspectorsonet/mysonetPrivate"
+
+unset ip_mysonetPrivate
 
 echo "1 - Votre serveur personnel MySoNet a été configuré."
 
