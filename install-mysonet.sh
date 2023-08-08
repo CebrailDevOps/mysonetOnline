@@ -309,6 +309,8 @@ sudo -u inspectorsonet bash -c "echo '$ip_mysonetPrivate' > /home/inspectorsonet
 
 unset ip_mysonetPrivate
 
+sudo chown :www-data /home/inspectorsonet/mysonetPrivate
+
 echo "1 - Votre serveur personnel MySoNet a été configuré."
 
 echo "2 - Pour vous connectez à votre compte allez sur un navigateur web et taper votre IP ou nom de domaine."
