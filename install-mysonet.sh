@@ -22,10 +22,11 @@ while true; do
 done
 
 echo "############"
-echo "1 - Ayez une IP publique ou un nom de domaine qui y redirige."
-echo "2 - En utilisation réseau local, assurez-vous d'avoir une IP privée statique."
+echo "1 - Ayez une IP publique statique et/ou un nom de domaine qui y redirige."
+echo "2 - Pensez aussi à avoir une IP privée statique."
 echo "3 - Assurez-vous que votre box soit bien configuré (redirection, NAT, ports ouverts...)."
-echo "Votre serveur est-il configuré correctement ? Oui (o) | Non (n)"
+echo "4 - Les ports 443 et 22 seront utilisés."
+echo "Votre box et serveur sont-ils configurés correctement ? Oui (o) | Non (n)"
 
 while true; do
   read -r -p "Veuillez entrer o ou n: " reponse
@@ -40,7 +41,7 @@ done
 echo "############"
 echo "1 - Apache2, PHP 8.1 et MariaDB vont être installés."
 echo "2 - Assurez-vous que rien puisse empêcher le bon fonctionnement de ces services."
-echo "3 - Un utilisateur va être créer, inspectorsonet, pour vous mettre en lien avec un serveur principal MySoNet.Online."
+echo "3 - Un utilisateur va être créer, inspectorsonet, pour vous mettre en lien avec le serveur MySoNet.Online."
 echo "4 - Ceci afin d'utiliser les services proposés par le site web comme la recherche et demande de nouveaux amis."
 echo "5 - Pour couper tout lien, vous pourrez toujours supprimer le fichier /home/inspectorsonet/.ssh/authorized_keys"
 echo "6 - Pensez à mettre un mot de passe solide pour cet utilisateur lorsque ce sera demandé !"
