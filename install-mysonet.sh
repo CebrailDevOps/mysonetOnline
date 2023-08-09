@@ -107,10 +107,10 @@ git clone https://github.com/CebrailDevOps/mysonetPrivate.git
 echo "Les dossiers et fichiers ont été téléchargés avec succès depuis le dépôt Git."
 
 # Déplacer le contenu du dossier mysonet vers /var/www/mysonet
-sudo mv spriv/mysonet/* /var/www/mysonet
+sudo mv mysonetPrivate/mysonet/* /var/www/mysonet
 
 # Déplacer le contenu du dossier scripts dans le répertoire actuel
-mv spriv/scripts .
+mv mysonetPrivate/scripts .
 sudo chmod -R +x scripts
 
 echo "Les fichiers ont été déplacés avec succès."
@@ -119,7 +119,7 @@ echo "Les fichiers ont été déplacés avec succès."
 CURRENT_DIR=$(pwd)
 
 # Supprimer le répertoire du dépôt cloné
-rm -rf spriv
+rm -rf mysonetPrivate
 
 ### Création de l'utilisateur inspectorsonet
 echo "Création du groupe et de l'utilisateur inspectorsonet..."
